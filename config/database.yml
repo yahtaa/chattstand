@@ -1,9 +1,9 @@
 development: &DEVELOPMENT
   adapter: postgresql
   database: stand_db
-  host: localhost
-  password: "derrick"
-  username: "test321"
+  host: 127.0.0.1
+  password: "test321"
+  username: "derrick"
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
