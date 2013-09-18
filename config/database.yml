@@ -1,23 +1,19 @@
-development: &DEVELOPMENT
+--- 
+development: 
   adapter: postgresql
   database: stand_db
-<<<<<<< HEAD
-  host: 127.0.0.1
-  password: "test321"
-  username: "derrick"
-=======
   host: localhost
-  password: "derrick"
-  username: "test321"
->>>>>>> master
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  <<: *DEVELOPMENT
-  database: stand_db_test
-
-production:
-  <<: *DEVELOPMENT
+  password: test321
+  username: derrick
+production: 
+  adapter: postgresql
   database: stand_db_prod
+  host: localhost
+  password: test321
+  username: derrick
+test: 
+  adapter: postgresql
+  database: stand_db_test
+  host: localhost
+  password: test321
+  username: derrick

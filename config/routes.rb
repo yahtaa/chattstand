@@ -2,14 +2,6 @@ Stand::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> master
   root to: "home#index"
 
   # Sample of regular route:

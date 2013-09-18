@@ -6,6 +6,7 @@
   <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaqPAx6-oWL5UN2NgBtDbXVOt2CDBP2ZY&sensor=false"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -15,32 +16,18 @@
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="navbar-header">
-	    <a class="navbar-brand" href="#">Chattanooga STAND</a>
+	    <a class="navbar-brand" href="#">Chattanooga STAND<p>(Visualizing a vision)</p></a>
+	    
 	  </div>
 
-	  <!-- Collect the nav links, forms, and other content for toggling -->
-	  <div class="collapse navbar-collapse navbar-ex1-collapse">
-	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="#">Link</a></li>
-	      <li><a href="#">Link</a></li>
-	      <li class="dropdown">
-	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-	        <ul class="dropdown-menu">
-	          <li><a href="#">Action</a></li>
-	          <li><a href="#">Another action</a></li>
-	          <li><a href="#">Something else here</a></li>
-	          <li><a href="#">Separated link</a></li>
-	          <li><a href="#">One more separated link</a></li>
-	        </ul>
-	      </li>
-	    </ul>
+	  
 	    
 	    <ul class="nav navbar-nav navbar-right">
 	      
 	      <li class="dropdown">
 	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
 	        <ul class="dropdown-menu">
-	          <li><a href="#">Mission</a></li>
+	          <li><a data-toggle="modal" href="#missionModal">Mission</a></li>
 	          <li><a href="//chattanoogastand.com" target="_blank">Chattanooga STAND</a></li>
 	          
 	        </ul>
@@ -48,6 +35,35 @@
 	    </ul>
 	</div><!-- /.navbar-collapse -->
 </nav>
+<div class="modal fade" id="missionModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Mission</h4>
+      </div>
+      <div class="modal-body">
+      	<h2>What is Chattanooga STAND?</h2>
+        <p><em>I believe they answered that question best:</p>
+        <blockquote>"Chattanooga Stand is a community visioning initiative for the Chattanooga region. Our mission is to engage community members to express their ideas for the future, organize around common purposes and translate vision into action."
+        <p><a href="http://chattanoogastand.com">- http://chattanoogastand.com</a></p></em></p>
+        </blockquote>
+        <h2>Well then, what is this site?</h2>
+        <p>This is a project that is attempting to make the raw data of the Chattanooga STAND survey a visual, and accessible, web application.</p>
+        <h2>Why?</h2>
+        <p>At this point, why not? This large amount of public data is begging to be presented to the masses.  Web technology gives us the tools to present this data in wonderfully dynamic way that can provide citizens and government meaningful insight</p>
+        <h2>That's Awesome!</h2>
+        <p>We thought so too when the project was started on 06/01/2013 on the 4th floor of the Chattanooga library for the National Day of Civic Hacking.<br />
+        <a href="http://hackforchange.com">Hack for change!</a><br />
+        <a href="https://hackforchange.hackpad.com/Chattanooga-Stand-Survey-Visualization-FhwCzFKscia">Ongoing Notes</a></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <%= yield %>
 
 </body>

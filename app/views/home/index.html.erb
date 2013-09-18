@@ -1,22 +1,39 @@
-<div id="map-canvas"></div>
+<div  style="position:absolute" id="map-canvas"></div>
 
+<div class="container" style="margin-top: 50px;">
+<div class="col-md-offset-2">YEY!</div>
+</div>
 <script type="text/javascript">
-function initialize() {
-				var myLoc = new google.maps.LatLng(35.045694, -85.309685);
-        var mapOptions = {
-          center: myLoc,
-          zoom:11,
-          mapTypeId: google.maps.MapTypeId.HYBRID
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
-      
 
-      var marker = new google.maps.Marker({
-      position: myLoc,
-      map: map,
-      
-  });
-}      
-      google.maps.event.addDomListener(window, 'load', initialize);
+        var myLoc = new google.maps.LatLng(35.045694, -85.309685);
+        var myLatLng = myLoc;
+        var mapOptions = {
+            zoom: 8,
+            center: myLatLng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+          
+  var nwgaLayer = new google.maps.KmlLayer('http://www.dmdatasecurity.com/stand/nwga-2.kml');
+  nwgaLayer.setMap(map);
+
+  var nealLayer = new google.maps.KmlLayer('http://www.dmdatasecurity.com/stand/neal-2.kml');
+  nealLayer.setMap(map);
+
+  var setn1Layer = new google.maps.KmlLayer('http://www.dmdatasecurity.com/stand/setn-1.kml');
+  setn1Layer.setMap(map);
+
+  var setn2Layer = new google.maps.KmlLayer('http://www.dmdatasecurity.com/stand/setn-2.kml');
+  setn2Layer.setMap(map);
+
+  var setn3Layer = new google.maps.KmlLayer('http://www.dmdatasecurity.com/stand/setn-3.kml');
+  setn3Layer.setMap(map);
+
+
+
+
+
+
 </script>
